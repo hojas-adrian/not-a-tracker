@@ -49,7 +49,7 @@ bot.on(
     })
 );
 
-bot.command("toNOT", async (ctx) => {
+bot.command("tonot", async (ctx) => {
   const notcoin = await kv.get<notcoinKV>(["notcoin", "current"]);
 
   if (!notcoin.value) {
@@ -69,7 +69,7 @@ bot.command("toNOT", async (ctx) => {
   });
 });
 
-bot.command("toUSD", async (ctx) => {
+bot.command("tousd", async (ctx) => {
   const notcoin = await kv.get<notcoinKV>(["notcoin", "current"]);
 
   if (!notcoin.value) {
