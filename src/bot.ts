@@ -58,7 +58,7 @@ bot.command("tonot", async (ctx) => {
 
   const ammount = ctx.match.split(" ")[0];
 
-  let parseAmmount = +ammount;
+  let parseAmmount = ammount === "" ? 1 : +ammount;
 
   if (isNaN(parseAmmount)) {
     parseAmmount = 1;
