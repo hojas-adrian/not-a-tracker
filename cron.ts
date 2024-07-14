@@ -1,10 +1,9 @@
 import { notcoinKV } from "./src/types.ts";
 
-export const startCron = async () => {
-  const kv = await Deno.openKv();
-  const COIN_BASE = Deno.env.get("COINBASE_API") as string;
-
+export const startCron = () => {
   Deno.cron("Log a message", "0 * * * *", async () => {
+    const kv = await Deno.openKv();
+    const COIN_BASE = Deno.env.get("COINBASE_API") as string;
     const url = "https://pro-api.coinmarketcap.com/v1/tools/price-conversion";
 
     const params = new URLSearchParams({
