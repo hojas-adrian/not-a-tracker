@@ -59,7 +59,7 @@ export const getNOT = async (ammount = 1, result?: "toUSD" | "toNOT") => {
       {
         description,
         thumbnail_url:
-          "https://s2.coinmarketcap.com/static/img/coins/64x64/28850.png",
+          "https://github.com/hojas-adrian/not-a-tracker/blob/main/assets/tracker.png?raw=true",
         reply_markup: new InlineKeyboard()
           .switchInline("to USD", "1 NOT")
           .switchInline("to NOT", "1 USD"),
