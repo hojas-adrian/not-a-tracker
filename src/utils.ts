@@ -48,7 +48,7 @@ export const getNOT = async (ammount = 1, result?: "toUSD" | "toNOT") => {
   )} USD`;
   if (result === "toUSD") {
     title = "USD͢/NOT";
-    description = `ㅤ\n${(parsedAmmount / notcoin.value.price).toFixed(5)} TON`;
+    description = `ㅤ\n${(parsedAmmount / notcoin.value.price).toFixed(5)} NOT`;
   }
 
   if (!result) {
