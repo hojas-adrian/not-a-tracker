@@ -36,18 +36,18 @@ export const getNOT = async (ammount = 1, result?: "toUSD" | "toNOT") => {
     return InlineQueryResultBuilder.article(
       "id:error",
 
-      `USD͢/TON`
+      `USD͢/NOT`
     ).text(`error fetching the data`, {
       parse_mode: "HTML",
     });
   }
 
-  let title = "TON͢/USD";
+  let title = "NOT͢/USD";
   let description = `ㅤ\n${(parsedAmmount * notcoin.value.price).toFixed(
     5
   )} USD`;
   if (result === "toUSD") {
-    title = "USD͢/TON";
+    title = "USD͢/NOT";
     description = `ㅤ\n${(parsedAmmount / notcoin.value.price).toFixed(5)} TON`;
   }
 
