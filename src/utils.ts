@@ -113,5 +113,7 @@ export const output = (
   ).toFixed(2)}% (1h)\n<code>${fecha.toLocaleDateString(
     "en",
     dateOptions
-  )}</code></pre>\nEarn now <a href="https://t.me/notcoin_bot?start=er_25443248">@notcoin_bot</a>`;
+  )}</code></pre>${
+    /* \nEarn now <a href="https://t.me/notcoin_bot?start=er_25443248">@notcoin_bot</a> */ ""
+  }`;
 };
