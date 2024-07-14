@@ -110,8 +110,8 @@ export const output = (
   )} | ${notcoin.price - notcoin.oldPrice >= 0 ? `▲` : "▼"}${(
     (Math.abs(difer) / notcoin.price) *
     100
-  ).toFixed(2)}% (1h)</pre>\n<code>${fecha.toLocaleDateString(
+  ).toFixed(2)}% (1h)\n<code>${fecha.toLocaleDateString(
     "en",
     dateOptions
-  )}</code>\n\nEarn now <a href="https://t.me/notcoin_bot?start=er_25443248">@notcoin_bot</a>`;
+  )}</code></pre>\n\nEarn now <a href="https://t.me/notcoin_bot?start=er_25443248">@notcoin_bot</a>`;
 };

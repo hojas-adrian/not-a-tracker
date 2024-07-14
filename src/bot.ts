@@ -66,6 +66,24 @@ bot.command("tonot", async (ctx) => {
 
   ctx.reply(output(notcoin.value, parseAmmount, "toUSD"), {
     parse_mode: "HTML",
+    reply_markup: new InlineKeyboard()
+      .switchInline("to USD", "1 NOT")
+      .switchInline("to NOT", "1 USD"),
+  });
+});
+
+bot.command("start", async (ctx) => {
+  const notcoin = await kv.get<notcoinKV>(["notcoin", "current"]);
+
+  if (!notcoin.value) {
+    return ctx.reply("error fetching the data");
+  }
+
+  ctx.reply(output(notcoin.value, 1, "toUSD"), {
+    parse_mode: "HTML",
+    reply_markup: new InlineKeyboard()
+      .switchInline("to USD", "1 NOT")
+      .switchInline("to NOT", "1 USD"),
   });
 });
 
