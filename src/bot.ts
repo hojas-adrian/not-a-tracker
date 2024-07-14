@@ -9,7 +9,6 @@ const kv = await Deno.openKv();
 
 export const bot = new Bot(BOT_TOKEN);
 bot.use(limit());
-
 startCron();
 
 bot.inlineQuery(/\b\d+\s*usd\b/i, async (ctx) => {
